@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="board" style="background-color: khaki;">
+<h1>Ayush Mishra Present's<br> IPL Mega Auction for {{ item }}</h1>
+<h2 id="Display-board" style="display: none;">Highest Bid: &#8377; <span id="highest-bid">{{ highest_bid }}</span> Lakh(s) by <span id="highest-bidder">{{ highest_bidder }}</span> on <span id="show pid">{{ pid }}</span>.</h2>
+    </div>
+    <div class="team" style="display: block">
+    <select required id="username">
+         <option value="">Select your team to Place your bid!</option>
+          <!-- Available Options -->
+          <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+          <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+          <option value="Rajasthan Royals">Rajasthan Royals</option>
+          <option value="Mumbai Indians">Mumbai Indians</option>
+          <option value="Chennai Super Kings">Chennai Super Kings</option>
+          <option value="Lucknow Super Giants">Lucknow Super Giants</option>
+          <option value="Gujarat Titans">Gujarat Titans</option>
+          <option value="Punjab Kings">Punjab Kings</option>
+          <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+          <option value="Delhi Capitals">Delhi Capitals</option>
+      </select>
+ </div>
+
+   <div class="marquee-container">
+    <div class="marquee-card"><img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/2.png"  height="300px" width="200px"><p style="background-color: aquamarine;">V. Kohli</p></div>
+    <div class="marquee-card"><img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/57.png"  height="300px" width="200px"><p style="background-color: pink;">M.S. Dhoni</p></div>
+    <div class="marquee-card"><img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/6.png"  height="300px" width="200px"><p style="background-color: lightgreen;">R. Sharma</p></div>
+    <div class="marquee-card"><img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/170.png"  height="300px" width="200px"><p style="background-color: indianred;">Q. De Kock</p></div>
+    <div class="marquee-card"><img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/playerheadshot/ipl/284/236.png"  height="300px" width="200px"><p style="background-color: burlywood;">C. Gayle</p></div>
+    <div class="marquee-card"><img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/10.png"  height="300px" width="200px"><p style="background-color: peru;">Y. Chahal</p></div>
+    <div class="marquee-card"><img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/116.png"  height="300px" width="200px"><p style="background-color: turquoise;">K. Rabada</p></div>
+    <div class="marquee-card"><img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/141.png"  height="300px" width="200px"><p style="background-color: yellow;">A. Russell</p></div>
+    <div class="marquee-card"><img src="https://images.mid-day.com/images/images/2017/apr/5Shane-Watson.jpg"  height="300px" width="200px"><p style="background-color: navajowhite;">S. Watson</p></div>
+  </div>
+    </div>
+<div>
+<form id="bid-form">
+{#    <input type="" id="username" placeholder="Your name">#}
+    <input type="text" id="pid" placeholder="Enter Player's Name">
+    <input type="number" id="bid" placeholder="Enter Your Bid amount">
+    <button type="submit" >Place Bid</button>
+</form>
+</div>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
