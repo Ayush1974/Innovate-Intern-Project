@@ -22,7 +22,7 @@ This IPL Auction App is a web application developed using Flask, HTML, CSS, Java
 ## Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/ipl-auction-app.git
+   git clone https://github.com/ayush1974/ipl-auction-app.git
    cd ipl-auction-app
    ```
 
